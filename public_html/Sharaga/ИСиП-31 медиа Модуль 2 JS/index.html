@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Гонщик</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+    <div class="screen screen-login">
+        <div>
+            <h2>Начало игры</h2>
+            <br>
+            <div class="selection-cars">
+                <img src="assets/images/car.png" class="selection-car" onclick="selectCar(0);">
+                <img src="assets/images/car2.png" class="selection-car" onclick="selectCar(1);">
+                <img src="assets/images/car3.png" class="selection-car" onclick="selectCar(2);">
+            </div>
+            <button class="w-100" disabled="disabled" onclick="start()">Играть</button>
+        </div>
+    </div>
+
+    <div class="screen screen-results hidden">
+        <div>
+            <h2>Игра завершена</h2>
+            <div>
+                <br>
+                <p>
+                    Вы продержались <span>02:50</span>, из них <span>00:14</span> в режиме ярости
+                </p>
+                <p>
+                    Прошлый игрок продержался <span>01:15</span>
+                </p>
+
+                <div class="alert alert-success">
+                    Вы выиграли!
+                </div>
+
+                <div class="alert alert-danger">
+                    Вы проиграли!
+                </div>
+
+                <button class="w-100">Играть сначала</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="screen-game">
+        <header>
+            <div class="flex flex-jc-sb">
+                <div class="text-center">
+                    Используется машина: <span id="nameCar">Car 1</span>
+                </div>
+                <div class="text-center">
+                    Прошло времени: <span id="timer">00:00</span>
+                </div>
+                <div class="text-center">
+                    Жизни: <span>3</span>
+                </div>
+            </div>
+        </header>
+        <div class="game-zone">
+            <img src="assets/images/car2.png" class="car" style="left: 0%; bottom: 33%"></div>
+
+        <!-- препятсвия  -->
+        <div class="block" style="left: 50%; bottom: 60%"></div>
+        <div class="block" style="left: 40%; bottom: 35%"></div>
+        <div class="block" style="left: 90%; bottom: 35%"></div>
+        <div class="block" style="left: 20%; bottom: 46%"></div>
+        <div class="block" style="left: 70%; bottom: 46%"></div>
+        <!-- / препятсвия -->
+    </div>
+    </div>
+
+<script src="cars.json"></script>
+<script src="game.js"></script>   
+</body>
+
+</html>
